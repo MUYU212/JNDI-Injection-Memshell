@@ -1,6 +1,6 @@
 ## 介绍
 
-JNDI注入利用工具，生成JNDI链接并启动后端相关服务，可用于Fastjson、Jackson等相关漏洞的验证。111
+JNDI注入利用工具，生成JNDI链接并启动后端相关服务，可用于Fastjson、Jackson等相关漏洞的验证。
 
 原本想自己做一个RMI注入内存马的工具，参考了一下welk1n佬的项目，结果发现佬写的精妙，可以改动的地方很少了已经，索性直接fork大佬的项目，添加工具。
 原仓库地址：https://github.com/welk1n/JNDI-Injection-Exploit
