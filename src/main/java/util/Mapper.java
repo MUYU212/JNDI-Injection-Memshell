@@ -36,8 +36,8 @@ public class Mapper {
         instructions.put("ExecTemplateJDK8","Build in "+ withColor("JDK 1.8",ANSI_RED) +" whose trustURLCodebase is true");
         instructions.put("ExecTemplateJDK7","Build in "+ withColor("JDK 1.7",ANSI_RED) +" whose trustURLCodebase is true");
         instructions.put("BypassByEL","Build in "+ withColor("JDK",ANSI_RED) +" whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath");
-        instructions.put("Behinder","Behinder Memshell");
-        instructions.put("TomcatShell","Tomcat Memshell");
+        instructions.put("Behinder","Behinder Servlet Memshell");
+        instructions.put("TomcatShell","Tomcat Servlet Memshell");
         System.out.println("----------------------------JNDI Links---------------------------- ");
         for (String name : references.keySet()) {
             String reference = references.get(name);

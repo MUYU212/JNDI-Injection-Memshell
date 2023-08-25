@@ -53,6 +53,7 @@ ldap://127.0.0.1:1389/jkzrcz
 
 ## 待实现
 
+- 添加filter、Interceptor类型的内存马
 - 融合groovy的bypass利用链到项目中。
 - 更新weblogic以及其他中间件的内存马注入环境
 - 增加注入哥斯拉内存马的模块
