@@ -49,7 +49,7 @@ ldap://127.0.0.1:1389/jkzrcz
 
   - 冰蝎内存马：路径/shell，密码rebeyond
 
-  
+  ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/2.jpg)
 
 ## 待实现
 
