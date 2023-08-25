@@ -40,9 +40,16 @@ ldap://127.0.0.1:1389/jkzrcz
 ```
 
 - Tomcat Memshell
+
   - 命令执行内存马：路径/shell，参数cmd
 
+   ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/1.jpg)
 
+- Behinder
+
+  - 冰蝎内存马：路径/shell，密码rebeyond
+
+  
 
 ## 待实现
 
