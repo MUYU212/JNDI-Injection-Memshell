@@ -61,6 +61,7 @@ public class ServerStart {
             addr = cmd.getOptionValue('A');
         }
         if(cmd.hasOption("S")){
+            //判断是否选择是注入内存马还是执行命令
             shell = cmd.getOptionValue('S');
         }
 
@@ -104,6 +105,7 @@ public class ServerStart {
         this.codebase = codebase;
         jettyServer = new JettyServer(jettyPort,cmd,shell);
         rmiRefServer = new RMIRefServer(rmiPort,codebase,cmd,shell);
+        ldapRefServer = new LDAPRefServer(ldapPort,this.codebase);
     }
 
     public static Options cmdlineOptions(){
