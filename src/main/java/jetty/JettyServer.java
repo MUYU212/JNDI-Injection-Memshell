@@ -139,12 +139,12 @@ public class JettyServer implements Runnable{
             case "ExecTemplateJDK8.class":
                 template = "template/ExecTemplateJDK8.class";
                 break;
-            case "Behinder.class":
-                template = "Behinder.class";
+            case "BehinderServletShell.class":
+                template = "BehinderServletShell.class";
                 isMemshell = true;
                 break;
-            case "TomcatShell.class":
-                template = "TomcatShell.class";
+            case "TomcatServletShell.class":
+                template = "TomcatServletShell.class";
                 isMemshell = true;
                 break;
                 // TODO:Add more

