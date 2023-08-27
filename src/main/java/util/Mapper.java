@@ -31,6 +31,7 @@ public class Mapper {
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"BypassByEL");
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"BehinderServletShell");
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"TomcatServletShell");
+        references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"SpringbootInterceptorShell");
 
 
         instructions.put("ExecTemplateJDK8","Build in "+ withColor("JDK 1.8",ANSI_RED) +" whose trustURLCodebase is true");
@@ -38,6 +39,7 @@ public class Mapper {
         instructions.put("BypassByEL","Build in "+ withColor("JDK",ANSI_RED) +" whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath");
         instructions.put("BehinderServletShell","Behinder Servlet Memshell");
         instructions.put("TomcatServletShell","Tomcat Servlet Memshell");
+        instructions.put("SpringbootInterceptorShell","Springboot Interceptor Memshell");
         System.out.println("----------------------------JNDI Links---------------------------- ");
         for (String name : references.keySet()) {
             String reference = references.get(name);
