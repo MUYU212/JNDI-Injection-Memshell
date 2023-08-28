@@ -61,8 +61,9 @@ ldap://127.0.0.1:1389/oeczn8
 	
 - Springboot interceptor Behinder Memshell:
   
-	- springboot拦截器冰蝎内存马,
+	- springboot拦截器冰蝎内存马，在request header中的shell参数中跟上Behinder，输入密码即可连接
 	
+	​	![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/4.jpg)
 
 
 
