@@ -46,7 +46,7 @@ public class ServerStart {
         CommandLine cmd = null;
         String shell = null;
         //default command
-        String[] cmdArray = {"open","/Applications/Calculator.app"};
+        String[] cmdArray = {"open","-a","Calculator"};
 
         try{
             cmd = parser.parse(cmdlineOptions(),args);
