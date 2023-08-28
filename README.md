@@ -58,10 +58,23 @@ ldap://127.0.0.1:1389/oeczn8
   - springboot的拦截器内存马，在request header中的command为入参执行命令
 
 	![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/3.jpg)
+	
+- Springboot interceptor Behinder Memshell:
+  
+	- springboot拦截器冰蝎内存马,
+	
+
+
+
+## Tips:
+
+Q:为什么有了Servlet/Controller内存马还是需要Interceptor内存马呢？
+
+A:如果服务端存在拦截器，指定如果未登录的状态除了/login接口其他都不执行，访问就会跳转回/login接口的话。这个controller的内存马不就访问不到了吗？访问不到就形同虚设了。所以controller的内存马并不能作为一种通用的内存马进行注入，于是就需要注入interceptor内存马了。
 
 ## 待实现
 
-- 添加filter、Interceptor类型的内存马
+- 添加filter、~~Interceptor~~类型的内存马
 - 融合groovy的bypass利用链到项目中。
 - 更新weblogic以及其他中间件的内存马注入环境
 - 增加注入哥斯拉内存马的模块

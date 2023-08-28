@@ -151,6 +151,10 @@ public class JettyServer implements Runnable{
                 template = "SpringbootInterceptorShell.class";
                 isMemshell = true;
                 break;
+            case "SpringbootInterceptorBehinderShell.class":
+                template = "SpringbootInterceptorBehinderShell.class";
+                isMemshell = true;
+                break;
                 // TODO:Add more
             default:
                 return null;
