@@ -33,6 +33,7 @@ public class Mapper {
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"TomcatServletShell");
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"SpringbootInterceptorShell");
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"SpringbootInterceptorBehinderShell");
+        references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"TomcatFilterShell");
 
 
         instructions.put("ExecTemplateJDK8","Build in "+ withColor("JDK 1.8",ANSI_RED) +" whose trustURLCodebase is true");
@@ -42,6 +43,7 @@ public class Mapper {
         instructions.put("TomcatServletShell","Tomcat Servlet Memshell");
         instructions.put("SpringbootInterceptorShell","Springboot Interceptor Memshell");
         instructions.put("SpringbootInterceptorBehinderShell","Springboot Interceptor Behinder Memshell");
+        instructions.put("TomcatFilterShell","Tomcat Filter Memshell");
         System.out.println("----------------------------JNDI Links---------------------------- ");
         for (String name : references.keySet()) {
             String reference = references.get(name);

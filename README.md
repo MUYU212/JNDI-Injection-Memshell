@@ -78,7 +78,7 @@ A:如果服务端存在拦截器，指定如果未登录的状态除了/login接
 
 ## 待实现
 
-- 添加filter、~~Interceptor~~类型的内存马
+- 添加filter、~~Interceptor~~类型的内存马。
 - 融合groovy的bypass利用链到项目中。
 - 更新weblogic以及其他中间件的内存马注入环境
 - 增加注入哥斯拉内存马的模块
