@@ -63,7 +63,7 @@ ldap://127.0.0.1:1389/moasws
 - Springboot interceptor Memshell
   - springboot的拦截器内存马，在request header中的command为入参执行命令
 
-    ![(https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/3.jpg)
+    ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/3.jpg)
 	
 - Springboot interceptor Behinder Memshell:
   
