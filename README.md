@@ -69,11 +69,11 @@ ldap://127.0.0.1:1389/moasws
   
 	- springboot拦截器冰蝎内存马，在request header中的shell参数中跟上Behinder，输入密码即可连接
 	
-	​	![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/4.jpg)
+	![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/4.jpg)
 
 - Tomcat Filter Memshell:
   - Tomcat filter内存马，在访问路径/evil?cmd=whoami，可以执行命令
-
+    ![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/5.jpg)
 
 ## Tips:
 
