@@ -78,7 +78,7 @@ ldap://127.0.0.1:1389/93hurt
   - Tomcat filter内存马，在访问路径/evil?cmd=whoami，可以执行命令
     ![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/5.jpg)
 
-- Behinder Filter Memshell"
+- Behinder Filter Memshell:
   - Behinder filter内存马，访问路径/behinderFilter,并在request header中的shell参数中跟上Behinder，输入密码即可连接
     ![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/6.jpg)
     
