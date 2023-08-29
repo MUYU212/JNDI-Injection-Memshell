@@ -159,6 +159,10 @@ public class JettyServer implements Runnable{
                 template = "TomcatFilterShell.class";
                 isMemshell = true;
                 break;
+            case "BehinderFilterShell.class":
+                template = "BehinderFilterShell.class";
+                isMemshell = true;
+                break;
                 // TODO:Add more
             default:
                 return null;
