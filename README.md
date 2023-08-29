@@ -52,18 +52,18 @@ ldap://127.0.0.1:1389/moasws
 
   - 命令执行Servlet内存马：路径/shell，参数cmd
 
-   ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/1.jpg)
+    ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/1.jpg)
 
 - Behinder Servlet Memshell
 
   - 冰蝎Servlet内存马：路径/shell，密码:elysium
 
-  ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/2.jpg)
+    ![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/2.jpg)
 
 - Springboot interceptor Memshell
   - springboot的拦截器内存马，在request header中的command为入参执行命令
 
-	![](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/3.jpg)
+    ![(https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/3.jpg)
 	
 - Springboot interceptor Behinder Memshell:
   
