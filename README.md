@@ -92,7 +92,7 @@ A:如果服务端存在拦截器，指定如果未登录的状态除了/login接
 
 - 实测了一下通过EL表达式来bypassJDK的JNDI注入的`trustURLCodebase`的限制的方法测试版本
 
-| JDK版本  | Springboot版本 | 内置的Tomcat版本     | 能否执行代码 |
+| JDK版本  | Springboot版本 | 内置的Tomcat版本     | 能否执行命令 |
 | -------- | -------------- | -------------------- | ------------ |
 | JDK8u191 | 2.5.13         | Apache Tomcat/9.0.62 | ✅            |
 | JDK8u191 | 2.5.14         | Apache Tomcat/9.0.63 | ❌            |
