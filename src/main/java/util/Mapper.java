@@ -35,12 +35,14 @@ public class Mapper {
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"SpringbootInterceptorBehinderShell");
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"TomcatFilterShell");
         references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"BehinderFilterShell");
+        references.put(RandomStringUtils.randomAlphanumeric(6).toLowerCase(),"BypassGroovy");
 
 
 
         instructions.put("ExecTemplateJDK8","Build in "+ withColor("JDK 1.8",ANSI_RED) +" whose trustURLCodebase is true");
         instructions.put("ExecTemplateJDK7","Build in "+ withColor("JDK 1.7",ANSI_RED) +" whose trustURLCodebase is true");
         instructions.put("BypassByEL","Build in "+ withColor("JDK",ANSI_RED) +" whose trustURLCodebase is false and have Tomcat 8+ or SpringBoot 1.2.x+ in classpath");
+        instructions.put("BypassGroovy","Build in "+withColor("JDK",ANSI_RED)+" bypass trustURLCodebase is false by Groovy");
         instructions.put("BehinderServletShell","Behinder Servlet Memshell");
         instructions.put("TomcatServletShell","Tomcat Servlet Memshell");
         instructions.put("SpringbootInterceptorShell","Springboot Interceptor Memshell");
