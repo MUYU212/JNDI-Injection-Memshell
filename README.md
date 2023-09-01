@@ -88,6 +88,17 @@ Q:为什么有了Servlet/Controller内存马还是需要Interceptor内存马呢�
 
 A:如果服务端存在拦截器，指定如果未登录的状态除了/login接口其他都不执行，访问就会跳转回/login接口的话。这个controller的内存马不就访问不到了吗？访问不到就形同虚设了。所以controller的内存马并不能作为一种通用的内存马进行注入，于是就需要注入interceptor内存马了。
 
+
+
+- 实测了一下通过EL表达式来bypassJDK的JNDI注入的`trustURLCodebase`的限制的方法测试版本
+
+| JDK版本  | Springboot版本 | 内置的Tomcat版本     | 能否执行代码 |
+| -------- | -------------- | -------------------- | ------------ |
+| JDK8u191 | 2.5.13         | Apache Tomcat/9.0.62 | ✅            |
+| JDK8u191 | 2.5.14         | Apache Tomcat/9.0.63 | ❌            |
+
+
+
 ## 待实现
 
 - 添加~~filter~~、~~Interceptor~~类型的内存马。
