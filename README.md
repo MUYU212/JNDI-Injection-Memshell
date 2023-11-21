@@ -113,8 +113,11 @@ A:如果服务端存在拦截器，指定如果未登录的状态除了/login接
 - 加入websocket内存马
 - 增加LDAP反序列化利用场景，最好能有利用链探测哈哈
 
-
 喜欢的朋友可以帮忙点一个Star。 :）
+
+## 关于我
+
+ ![公众号](https://raw.githubusercontent.com/MUYU212/JNDI-Injection-Memshell/main/screenshot/7.jpg)
 
 ## Star History
 
