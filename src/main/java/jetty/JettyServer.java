@@ -3,6 +3,7 @@ package jetty;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletHandler;
 import sun.misc.IOUtils;
+import util.StreamUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -72,7 +73,8 @@ public class JettyServer implements Runnable{
             //这里其实就得做一个分支了，应该直接返回shell的字节码文件不能再动态生成了
             if(isMemshell){
                 try{
-                    byte[] bytes = IOUtils.readFully(in, -1, false);
+//                    byte[] bytes = IOUtils.readFully(in, -1, false);
+                    byte[] bytes = StreamUtil.readFully(in,true);
                     bain = new ByteArrayInputStream(bytes);
                 }catch (Exception e){
                     e.printStackTrace();
